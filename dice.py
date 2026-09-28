@@ -22,4 +22,15 @@ class Die:
         """Print a random number between 1 and the number of sides."""
         print(random.randint(1, self.sides))
 
+def main():
+    """Roll that baby! Rolls the die."""
+    dice = [Die(), Die(10), Die(20)]
+    for die in dice:
+        print(f"Rolling a {die.sides}-sided die {die.sides} times:")
+        for _ in range(die.sides):
+            die.roll_die()
+        print()
 
+
+if __name__ == "__main__":
+    main()
